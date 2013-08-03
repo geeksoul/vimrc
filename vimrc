@@ -38,7 +38,11 @@ endif
 
  " 更動vimrc後自動載入
    if has("autocmd")
-     autocmd bufwritepost ~/.vimrc source ~/.vimrc
+       if has("~/.vimrc")
+	   autocmd bufwritepost ~/.vimrc source ~/.vimrc
+       else 	
+	   autocmd bufwritepost ~/.vim/vimrc source ~/.vim/vimrc     
+       endif
    endif
 
  " 加強式尋找功能，在鍵入 patern 時會立即反應移動至目前鍵入之 patern 上
@@ -57,7 +61,9 @@ endif
  " 命令行自動補全
    set wildmenu
 
-
+ " 設置工作目錄為當前編輯文件的目錄
+   set bsdir=buffer
+   set autochdir
 
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -164,7 +170,8 @@ endif
 
  " 設定Theme
    colorscheme molokai
- " colorscheme solarized
+   " colorscheme solarized   
+   " set background=dark "(暗色系的 solarized)
 
  " 支援256色
    set t_Co=256
