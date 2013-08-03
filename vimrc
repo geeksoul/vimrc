@@ -170,8 +170,8 @@ endif
 
  " 設定Theme
    colorscheme molokai
-   " colorscheme solarized   
-   " set background=dark "(暗色系的 solarized)
+ " colorscheme solarized   
+ " set background=dark "(暗色系的 solarized)
 
  " 支援256色
    set t_Co=256
