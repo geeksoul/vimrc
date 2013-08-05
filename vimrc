@@ -45,6 +45,12 @@ endif
        endif
    endif
 
+ " 自動重新加載文件
+   set autoread
+
+ " 自動排版
+   set autoindent
+
  " 加強式尋找功能，在鍵入 patern 時會立即反應移動至目前鍵入之 patern 上
    set incsearch
 
@@ -113,6 +119,8 @@ endif
  " 安裝 nerdtree 檔案檢視外掛
    NeoBundle 'scrooloose/nerdtree'
 
+ " NeoBundle 'terryma/vim-multiple-cursors'
+ 
  " 漂漂 PowerLine 
    NeoBundle 'Lokaltog/vim-powerline'
    let g:Powerline_symbols = 'fancy'
@@ -174,6 +182,9 @@ endif
  " 顯示 tab 與 space 的差別
  " set list
 
+ " 支援256色
+   set t_Co=256
+
  " 設定字型
    set guifont=YaHei_Consolas_Hybrid:h16
 
@@ -181,9 +192,6 @@ endif
    colorscheme molokai
  " colorscheme solarized   
  " set background=dark "(暗色系的 solarized)
-
- " 支援256色
-   set t_Co=256
 
  " 透明背景
    if has("gui_running")
@@ -200,28 +208,10 @@ endif
 " => Vim 程式相關
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
-
-" <F4> 編譯和運行C++
-" nnoremap <F4> :<C-U>make %:r && ./%:r<CR>
-
- " <F5> 編譯和運行C++
-   map <F5> :call CompileRunGpp()<CR>
-   func! CompileRunGpp()
-   exec "w"
-   exec "!g++ % -o %<" 
-   exec "! ./%<"  
-   exec "!rm %<"
-   endfunc
-
-
- " <F6> 編譯和運行C
-   map <F6> :call CompileRunGcc()<CR>
-   func! CompileRunGcc()
-   exec "w"
-   exec "!gcc % -o %<"
-   exec "! ./%<"
-   endfunc
-
+ " <F5> 編譯和運行 C++/C 並刪除編譯檔
+  autocmd FileType c,cpp nmap <F9> :w<CR> :make<CR>
+  autocmd FileType c nmap <F5> :w<CR> :!gcc -Wall -o %:r %<CR> :!./%:r && rm ./%:r<CR>
+  autocmd FileType cpp nmap <F5> :w<CR> :!g++ -Wall -o %:r %<CR> :!./%:r && rm ./%:r<CR>
 
  " <F7> 運行python程序
    map <F7> :w<cr>:!python %<cr>
