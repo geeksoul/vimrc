@@ -48,8 +48,21 @@ endif
  " 自動重新加載文件
    set autoread
 
- " 自動排版
-   set autoindent
+ " 自動對齊
+   set cindent
+
+ " 保留 100 個使用過的指令
+   set history=100
+
+ " 讓 backspace 在 INSERT 模式下重獲自由 (indent 縮進處、eol 斷行處、start 開始進入 insert 模式之前的位置)
+   set backspace=indent,eol,start
+   
+ " 文件關閉後，仍保留編輯歷史。
+   set undofile
+   set undodir=~/.vim/.undo
+
+ " 共享系統(MAC OS X)的剪貼簿
+   set clipboard=unnamed
 
  " 加強式尋找功能，在鍵入 patern 時會立即反應移動至目前鍵入之 patern 上
    set incsearch
@@ -175,9 +188,8 @@ endif
  " 狀態列高度 
    set laststatus=2 
 
- " displays tabs with :set list & displays when a line runs off-screen
- "set listchars=tab:>-,eol:$,trail:-,precedes:<,extends:>
- "set listchars=tab:>-,eol:↵,trail:-,precedes:<,extends:>
+ " 區格 tab 鍵與斷行處
+   set listchars=tab:>-,eol:$ 
 
  " 顯示 tab 與 space 的差別
  " set list
@@ -228,4 +240,8 @@ endif
 
  " 替 LaTex 檔作拼字檢查  
    autocmd FileType tex set spell
+
+
+
+
 
