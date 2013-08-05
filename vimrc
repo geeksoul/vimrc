@@ -137,6 +137,15 @@ endif
  " set lines=35
  " set columns=140
 
+ " 顯示標題
+   set title
+
+ " 顯示遊標線
+   set cursorline
+
+ " 在狀態列顯示目前所執行的命令
+   set showcmd
+
  " 畫面上下方所保留的行數
    set so=7
 
@@ -227,4 +236,6 @@ endif
    endfunc
 
 
+ " 替 LaTex 檔作拼字檢查  
+   autocmd FileType tex set spell
 
