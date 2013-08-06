@@ -60,6 +60,7 @@ endif
  " 文件關閉後，仍保留編輯歷史。
    set undofile
    set undodir=~/.vim/.undo
+   set undolevels=1000
 
  " 共享系統(MAC OS X)的剪貼簿
    set clipboard=unnamed
