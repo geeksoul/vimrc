@@ -224,9 +224,8 @@ endif
   autocmd FileType c,cpp nmap <F9> :w<CR> :make<CR>
   autocmd FileType c nmap <F5> :w<CR> :!gcc -Wall -o %:r %<CR> :!./%:r && rm ./%:r<CR>
   autocmd FileType cpp nmap <F5> :w<CR> :!g++ -Wall -o %:r %<CR> :!./%:r && rm ./%:r<CR>
-
- " <F7> 運行python程序
-   map <F7> :w<cr>:!python %<cr>
+ " 編譯 Python
+ " autocmd FileType python nmap <F5> :w<CR> :!python %<CR>
 
 
  " <F10> gdb調試
