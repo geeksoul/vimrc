@@ -14,16 +14,6 @@ if has("multi_byte")
         set ambiwidth=double
     endif
  
-"    if has("win32")
-"	"處理MENU及右鍵MENU亂碼
-"        source $VIMRUNTIME/delmenu.vim
-"        source $VIMRUNTIME/menu.vim
-"        source $VIMRUNTIME/mswin.vim
-"        behave mswin
-"        language messages zh_TW.utf-8 "處理consle輸出亂碼
-"    endif
-"else
-"    echoerr "Sorry, this version of (g)vim was not compiled with +multi_byte"
 endif
 
 
@@ -38,11 +28,7 @@ endif
 
  " 更動vimrc後自動載入
    if has("autocmd")
-       if has("~/.vimrc")
-	   autocmd bufwritepost ~/.vimrc source ~/.vimrc
-       else 	
-	   autocmd bufwritepost ~/.vim/vimrc source ~/.vim/vimrc     
-       endif
+        autocmd bufwritepost ~/.vim/vimrc source ~/.vim/vimrc
    endif
 
  " 自動重新加載文件
@@ -132,6 +118,9 @@ endif
 
  " 安裝 nerdtree 檔案檢視外掛
    NeoBundle 'scrooloose/nerdtree'
+
+ " snipmate
+   NeoBundle 'msanders/snipmate.vim'
 
  " NeoBundle 'terryma/vim-multiple-cursors'
  
