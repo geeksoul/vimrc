@@ -61,6 +61,7 @@ endif
  " set foldmethod=indent
 
  " 設定縮排長度
+   set expandtab
    set softtabstop=4
    set shiftwidth=4
 
