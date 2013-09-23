@@ -129,6 +129,9 @@ endif
    NeoBundle 'Lokaltog/vim-powerline'
    let g:Powerline_symbols = 'fancy'
 
+ " Git 
+   NeoBundle 'tpope/vim-fugitive'
+
  " Theme
    NeoBundle 'tomasr/molokai'
    NeoBundle 'altercation/vim-colors-solarized'
