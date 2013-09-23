@@ -3,5 +3,6 @@ neobundle.vim
 nerdtree
 snipmate.vim
 vim-colors-solarized
+vim-fugitive
 vim-powerline
 vimproc
