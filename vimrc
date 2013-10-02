@@ -60,6 +60,10 @@ endif
  " 加強式尋找功能，在鍵入 patern 時會立即反應移動至目前鍵入之 patern 上
    set incsearch
 
+ " 搜尋時忽略大小寫，若搜尋關鍵字有大小寫則不忽略
+   set ignorecase
+   set smartcase
+
  " 顯示相對應括號
    set showmatch
 
