@@ -228,6 +228,9 @@ endif
 " => Vim 程式相關
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
+ " 設定 C/C++ 語言縮進風格
+  autocmd FileType c,cpp,cc set cindent comments=sr:/*,mb:*,el:*/,:// cino=>s,e0,n0,f0,{0,}0,^-1s,:0,=s,g0,h1s,p2,t0,+2,(2,)20,*30
+
  " <F5> 編譯和運行 C++/C 並刪除編譯檔
   autocmd FileType c,cpp nmap <F9> :w<CR> :make<CR>
   autocmd FileType c nmap <F5> :w<CR> :!gcc -Wall -o %:r % <BAR> more<CR> :!./%:r && rm ./%:r<CR>
