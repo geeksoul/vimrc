@@ -27,9 +27,15 @@ endif
    set nocompatible
 
  " 更動vimrc後自動載入
-   if has("autocmd")
-        autocmd bufwritepost ~/.vim/vimrc source ~/.vim/vimrc
-   endif
+ " if has("autocmd")
+ "      autocmd bufwritepost ~/.vim/vimrc source ~/.vim/vimrc
+ " endif
+
+ " 更動vimrc後自動載入 (不影響PowerLine)
+   augroup MyAutoCmd
+       autocmd!
+       autocmd MyAutoCmd BufWritePost ~/.vim/vimrc nested source ~/.vim/vimrc
+   augroup END
 
  " 自動重新加載文件
    set autoread
