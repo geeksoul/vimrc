@@ -166,6 +166,7 @@ endif
 
  " 顯示遊標線
    set cursorline
+   highlight CursorLine guibg=#003853 ctermbg=24  gui=none cterm=none
 
  " 在狀態列顯示目前所執行的命令
    set showcmd
