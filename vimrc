@@ -78,6 +78,9 @@ endif
    set bsdir=buffer
    set autochdir
 
+ " 進入命令模式自動無視中文輸入法，離開命令模式自動重啟中文輸入法
+   autocmd InsertEnter * set noimdisable
+   autocmd InsertLeave * set imdisable
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => 設鍵盤重設 
