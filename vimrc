@@ -168,10 +168,6 @@ endif
  " 顯示標題
    set title
 
- " 顯示遊標線
-   set cursorline
-   highlight CursorLine guibg=#003853 ctermbg=24  gui=none cterm=none
-
  " 在狀態列顯示目前所執行的命令
    set showcmd
 
@@ -220,6 +216,10 @@ endif
 
  " 隱藏工具列
    set guioptions-=T
+
+ " 顯示遊標線
+   set cursorline
+   highlight CursorLine guibg=#003853 ctermbg=24  gui=none cterm=none
 
 
 
