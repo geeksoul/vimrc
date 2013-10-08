@@ -224,6 +224,7 @@ g:neobundle#default_options	neobundle.txt	/*g:neobundle#default_options*
 g:neobundle#default_site	neobundle.txt	/*g:neobundle#default_site*
 g:neobundle#enable_name_conversion	neobundle.txt	/*g:neobundle#enable_name_conversion*
 g:neobundle#install_max_processes	neobundle.txt	/*g:neobundle#install_max_processes*
+g:neobundle#install_process_timeout	neobundle.txt	/*g:neobundle#install_process_timeout*
 g:neobundle#log_filename	neobundle.txt	/*g:neobundle#log_filename*
 g:neobundle#rm_command	neobundle.txt	/*g:neobundle#rm_command*
 g:neobundle#types#git#default_protocol	neobundle.txt	/*g:neobundle#types#git#default_protocol*
