@@ -57,6 +57,7 @@
 :NeoBundleList	neobundle.txt	/*:NeoBundleList*
 :NeoBundleLocal	neobundle.txt	/*:NeoBundleLocal*
 :NeoBundleLog	neobundle.txt	/*:NeoBundleLog*
+:NeoBundleRecipe	neobundle.txt	/*:NeoBundleRecipe*
 :NeoBundleReinstall	neobundle.txt	/*:NeoBundleReinstall*
 :NeoBundleSource	neobundle.txt	/*:NeoBundleSource*
 :NeoBundleUpdate	neobundle.txt	/*:NeoBundleUpdate*
@@ -286,6 +287,7 @@ neobundle-options-hooks	neobundle.txt	/*neobundle-options-hooks*
 neobundle-options-lazy	neobundle.txt	/*neobundle-options-lazy*
 neobundle-options-name	neobundle.txt	/*neobundle-options-name*
 neobundle-options-overwrite	neobundle.txt	/*neobundle-options-overwrite*
+neobundle-options-recipe	neobundle.txt	/*neobundle-options-recipe*
 neobundle-options-regular_name	neobundle.txt	/*neobundle-options-regular_name*
 neobundle-options-resettable	neobundle.txt	/*neobundle-options-resettable*
 neobundle-options-rtp	neobundle.txt	/*neobundle-options-rtp*
