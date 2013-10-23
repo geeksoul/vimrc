@@ -206,6 +206,8 @@ endif
 
  " 設定Theme
    colorscheme molokai
+ " 讓 molokai 支援 266 色 (實驗性
+   let g:rehash256 = 1
  " colorscheme solarized   
  " set background=dark "(暗色系的 solarized)
 
