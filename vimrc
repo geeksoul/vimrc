@@ -232,7 +232,7 @@ endif
 
  " 顯示遊標線
    set cursorline
-   highlight CursorLine guibg=#05f00 ctermbg=22  gui=none cterm=none
+   highlight CursorLine guibg=#3a3a3a ctermbg=237  gui=none cterm=none
  " highlight CursorLine guibg=#003853 ctermbg=24  gui=none cterm=none
 
 
