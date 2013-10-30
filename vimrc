@@ -16,7 +16,17 @@ if has("multi_byte")
  
 endif
 
-
+ " 正確顯示 .NFO 檔
+   function! SetFileEncodings(encodings)
+   let b:myfileencodingsbak=&fileencodings
+   let &fileencodings=a:encodings
+   endfunction
+   function! RestoreFileEncodings()
+   let &fileencodings=b:myfileencodingsbak
+   unlet b:myfileencodingsbak
+   endfunction
+   au BufReadPre *.nfo call SetFileEncodings('cp437')|set ambiwidth=single
+   au BufReadPost *.nfo call RestoreFileEncodings() 
 
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -86,8 +96,9 @@ endif
    autocmd InsertEnter * set noimdisable
    autocmd InsertLeave * set imdisable
 
+
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" => 設鍵盤重設 
+" => 鍵盤重設 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
    
  " 自宮方向鍵
@@ -232,12 +243,12 @@ endif
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
  " 設定 C/C++ 語言縮進風格
-  autocmd FileType c,cpp,cc set cindent comments=sr:/*,mb:*,el:*/,:// cino=>s,e0,n0,f0,{0,}0,^-1s,:0,=s,g0,h1s,p2,t0,+2,(2,)20,*30
+   autocmd FileType c,cpp,cc set cindent comments=sr:/*,mb:*,el:*/,:// cino=>s,e0,n0,f0,{0,}0,^-1s,:0,=s,g0,h1s,p2,t0,+2,(2,)20,*30
 
  " <F5> 編譯和運行 C++/C 並刪除編譯檔
-  autocmd FileType c,cpp nmap <F9> :w<CR> :make<CR>
-  autocmd FileType c nmap <F5> :w<CR> :!gcc -Wall -o %:r % <BAR> more<CR> :!./%:r && rm ./%:r<CR>
-  autocmd FileType cpp nmap <F5> :w<CR> :!g++ -Wall -o %:r % <BAR> more<CR> :!./%:r && rm ./%:r<CR>
+   autocmd FileType c,cpp nmap <F9> :w<CR> :make<CR>
+   autocmd FileType c nmap <F5> :w<CR> :!gcc -Wall -o %:r % <BAR> more<CR> :!./%:r && rm ./%:r<CR>
+   autocmd FileType cpp nmap <F5> :w<CR> :!g++ -Wall -o %:r % <BAR> more<CR> :!./%:r && rm ./%:r<CR>
 
  " 編譯 Python
  " autocmd FileType python nmap <F5> :w<CR> :!python %<CR>
