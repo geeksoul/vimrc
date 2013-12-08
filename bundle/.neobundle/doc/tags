@@ -167,7 +167,11 @@ ReloadAllSnippets()	snipMate.txt	/*ReloadAllSnippets()*
 ReloadSnippets()	snipMate.txt	/*ReloadSnippets()*
 ResetAllSnippets()	snipMate.txt	/*ResetAllSnippets()*
 ResetSnippets()	snipMate.txt	/*ResetSnippets()*
+\\	commentary.txt	/*\\\\*
+\\\	commentary.txt	/*\\\\\\*
+\\u	commentary.txt	/*\\\\u*
 before	solarized.txt	/*before*
+commentary.txt	commentary.txt	/*commentary.txt*
 fugitive	fugitive.txt	/*fugitive*
 fugitive#head(...)	fugitive.txt	/*fugitive#head(...)*
 fugitive#statusline()	fugitive.txt	/*fugitive#statusline()*
@@ -229,6 +233,7 @@ g:neobundle#install_process_timeout	neobundle.txt	/*g:neobundle#install_process_
 g:neobundle#log_filename	neobundle.txt	/*g:neobundle#log_filename*
 g:neobundle#rm_command	neobundle.txt	/*g:neobundle#rm_command*
 g:neobundle#types#git#default_protocol	neobundle.txt	/*g:neobundle#types#git#default_protocol*
+g:neobundle#types#git#enable_submodule	neobundle.txt	/*g:neobundle#types#git#enable_submodule*
 g:neobundle#types#hg#default_protocol	neobundle.txt	/*g:neobundle#types#hg#default_protocol*
 g:neobundle#types#raw#calc_hash_command	neobundle.txt	/*g:neobundle#types#raw#calc_hash_command*
 g:neobundle_default_git_protocol	neobundle.txt	/*g:neobundle_default_git_protocol*
@@ -248,6 +253,9 @@ g:vimproc#popen2_commands	vimproc.txt	/*g:vimproc#popen2_commands*
 g:vimproc_dll_path	vimproc.txt	/*g:vimproc_dll_path*
 g:vimproc_password_pattern	vimproc.txt	/*g:vimproc_password_pattern*
 g:vimproc_popen2_commands	vimproc.txt	/*g:vimproc_popen2_commands*
+gc	commentary.txt	/*gc*
+gcc	commentary.txt	/*gcc*
+gcu	commentary.txt	/*gcu*
 i_CTRL-R_<Tab>	snipMate.txt	/*i_CTRL-R_<Tab>*
 list-snippets	snipMate.txt	/*list-snippets*
 multi_snip	snipMate.txt	/*multi_snip*
@@ -263,6 +271,9 @@ neobundle#is_sourced()	neobundle.txt	/*neobundle#is_sourced()*
 neobundle#local()	neobundle.txt	/*neobundle#local()*
 neobundle#rc()	neobundle.txt	/*neobundle#rc()*
 neobundle#source()	neobundle.txt	/*neobundle#source()*
+neobundle#tap()	neobundle.txt	/*neobundle#tap()*
+neobundle#tapped	neobundle.txt	/*neobundle#tapped*
+neobundle#untap()	neobundle.txt	/*neobundle#untap()*
 neobundle-commands	neobundle.txt	/*neobundle-commands*
 neobundle-contents	neobundle.txt	/*neobundle-contents*
 neobundle-examples	neobundle.txt	/*neobundle-examples*
@@ -349,7 +360,10 @@ unite-action-neobundle-lazy	neobundle.txt	/*unite-action-neobundle-lazy*
 unite-action-neobundle-search	neobundle.txt	/*unite-action-neobundle-search*
 unite-kind-neobundle	neobundle.txt	/*unite-kind-neobundle*
 urxvt	solarized.txt	/*urxvt*
+v_\\	commentary.txt	/*v_\\\\*
+v_gc	commentary.txt	/*v_gc*
 vim-colors-solarized	solarized.txt	/*vim-colors-solarized*
+vimproc	vimproc.txt	/*vimproc*
 vimproc#cmd#system()	vimproc.txt	/*vimproc#cmd#system()*
 vimproc#delete_trash()	vimproc.txt	/*vimproc#delete_trash()*
 vimproc#dll_version()	vimproc.txt	/*vimproc#dll_version()*
