@@ -144,6 +144,9 @@ endif
  " 安裝 nerdtree 檔案檢視外掛
    NeoBundle 'scrooloose/nerdtree'
 
+ " commentary 自動注釋工具
+   NeoBundle 'tpope/vim-commentary'
+
  " snipmate
    NeoBundle 'msanders/snipmate.vim'
 
