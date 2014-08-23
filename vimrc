@@ -253,6 +253,9 @@ endif
    autocmd FileType c nmap <F5> :w<CR> :!gcc -Wall -o %:r % <BAR> more<CR> :!./%:r && rm ./%:r<CR>
    autocmd FileType cpp nmap <F5> :w<CR> :!g++ -Wall -o %:r % <BAR> more<CR> :!./%:r && rm ./%:r<CR>
 
+ " <F5> 編譯和運行 Objective-C 並刪除編譯檔
+   autocmd FileType objc nmap <F5> :w<CR> :!clang -fobjc-arc % -o %:r <BAR> more<CR> :!./%:r && rm ./%:r<CR>
+
  " 編譯 Python
  " autocmd FileType python nmap <F5> :w<CR> :!python %<CR>
 
