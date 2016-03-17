@@ -130,16 +130,22 @@ endif
      set runtimepath+=~/.vim/bundle/neobundle.vim/
    endif
 
-   call neobundle#rc(expand('~/.vim/bundle/'))
-
+ " call neobundle#rc(expand('~/.vim/bundle/'))
+   call neobundle#begin(expand('~/.vim/bundle'))
 
  " 讓 NeoBundle 管理 NeoBundle
    NeoBundleFetch 'Shougo/neobundle.vim'
 
  " NeoBundle 建議安裝外掛 
  " After install, turn shell ~/.vim/bundle/vimproc, (n,g)make -f your_machines_makefile
-   NeoBundle 'Shougo/vimproc'
+ " NeoBundle 'Shougo/vimproc'
  " NeoBundle 'Shougo/unite.vim'
+
+   NeoBundle 'Shougo/vimproc.vim', {
+     'build' : {
+         'mac' : 'make',
+        },
+    }
 
  " 安裝 nerdtree 檔案檢視外掛
    NeoBundle 'scrooloose/nerdtree'
@@ -153,8 +159,19 @@ endif
  " NeoBundle 'terryma/vim-multiple-cursors'
  
  " 漂漂 PowerLine 
-   NeoBundle 'Lokaltog/vim-powerline'
+   NeoBundle 'powerline/powerline', {'rtp': 'powerline/bindings/vim/'}
+ " NeoBundle 'powerline/fonts'
    let g:Powerline_symbols = 'fancy'
+   let g:Powerline_symbols = 'compatible'
+
+ " 輕量 AirLine   
+ "  NeoBundle 'vim-airline/vim-airline'
+ " AirLine Theme
+ "  NeoBundle 'vim-airline/vim-airline-themes' 
+ " 指定 AirLine 的 Theme 
+ "  let g:airline_theme='molokai'
+ " 讓 AirLine 使用 PowerLine 的字型
+ "  let g:airline_powerline_fonts = 1
 
  " Git 
    NeoBundle 'tpope/vim-fugitive'
@@ -163,12 +180,14 @@ endif
    NeoBundle 'tomasr/molokai'
    NeoBundle 'altercation/vim-colors-solarized'
 
+
+   call neobundle#end()
+
+
  " 自動偵測外掛文件類型
    filetype plugin indent on 
 
    NeoBundleCheck
-
-
 
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -176,8 +195,8 @@ endif
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
  " 設定預設長寬
- " set lines=35
- " set columns=140
+   set lines=35
+   set columns=140
 
  " 顯示標題
    set title
@@ -216,7 +235,9 @@ endif
    set t_Co=256
 
  " 設定字型
-   set guifont=YaHei_Consolas_Hybrid:h16
+ " set guifont=YaHei_Consolas_Hybrid:h16
+ " set guifont=Inconsolata\ for\ Powerline:h16
+   set guifont=Source\ Code\ Pro\ for\ Powerline:h16 
 
  " 設定Theme
    colorscheme molokai

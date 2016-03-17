@@ -1,9 +1,8 @@
 molokai
 neobundle.vim
 nerdtree
+powerline
 snipmate.vim
 vim-colors-solarized
 vim-commentary
 vim-fugitive
-vim-powerline
-vimproc
