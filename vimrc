@@ -36,12 +36,12 @@ endif
  " 關閉 Vi 相容模式 (NeoBundle需要)
    set nocompatible
 
- " 更動vimrc後自動載入
- " if has("autocmd")
- "      autocmd bufwritepost ~/.vim/vimrc source ~/.vim/vimrc
- " endif
+ " 更動vimrc 後自動載入
+ "  if has("autocmd")
+ "       autocmd bufwritepost ~/.vim/vimrc source ~/.vim/vimrc
+ "  endif
 
- " 更動vimrc後自動載入 (不影響PowerLine)
+ " 更動vimrc 後自動載入 (不影響vim-PowerLine)
    augroup MyAutoCmd
        autocmd!
        autocmd MyAutoCmd BufWritePost ~/.vim/vimrc nested source ~/.vim/vimrc
@@ -142,11 +142,12 @@ endif
  " NeoBundle 'Shougo/unite.vim'
 
    NeoBundle 'Shougo/vimproc.vim', {
-     'build' : {
-         'mac' : 'make',
-        },
-    }
+   \ 'build' : {
+   \     'mac' : 'make -f make_mac.mak',
+   \    },
+   \ }
 
+   
  " 安裝 nerdtree 檔案檢視外掛
    NeoBundle 'scrooloose/nerdtree'
 
@@ -175,6 +176,9 @@ endif
 
  " Git 
    NeoBundle 'tpope/vim-fugitive'
+
+ " supertab
+   NeoBundle 'ervandew/supertab'
 
  " Theme
    NeoBundle 'tomasr/molokai'
