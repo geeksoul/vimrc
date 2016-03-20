@@ -7,4 +7,5 @@ supertab
 vim-colors-solarized
 vim-commentary
 vim-fugitive
+vim-markdown
 vimproc.vim

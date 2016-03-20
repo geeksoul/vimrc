@@ -165,14 +165,8 @@ endif
    let g:Powerline_symbols = 'fancy'
    let g:Powerline_symbols = 'compatible'
 
- " 輕量 AirLine   
- "  NeoBundle 'vim-airline/vim-airline'
- " AirLine Theme
- "  NeoBundle 'vim-airline/vim-airline-themes' 
- " 指定 AirLine 的 Theme 
- "  let g:airline_theme='molokai'
- " 讓 AirLine 使用 PowerLine 的字型
- "  let g:airline_powerline_fonts = 1
+ " MarkDown Syntax highlighting
+   NeoBundle 'plasticboy/vim-markdown', {'base':'~/.vim/bundle/markdown_related'}
 
  " Git 
    NeoBundle 'tpope/vim-fugitive'
@@ -181,8 +175,8 @@ endif
    NeoBundle 'ervandew/supertab'
 
  " Theme
-   NeoBundle 'tomasr/molokai'
-   NeoBundle 'altercation/vim-colors-solarized'
+   NeoBundle 'tomasr/molokai', {'base':'~/.vim/bundle/vim_theme'}
+   NeoBundle 'altercation/vim-colors-solarized', {'base':'~/.vim/bundle/vim_theme'}
 
 
    call neobundle#end()
